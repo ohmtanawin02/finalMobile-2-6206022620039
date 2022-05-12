@@ -18,6 +18,7 @@ class _ViewState extends State<View> {
   TextEditingController ageController = new TextEditingController();
   TextEditingController weightController = new TextEditingController();
   TextEditingController heightController = new TextEditingController();
+  TextEditingController bmicalController = new TextEditingController();
 
   @override
   void initState() {
@@ -28,6 +29,7 @@ class _ViewState extends State<View> {
     ageController.text = widget.bmi['age'];
     weightController.text = widget.bmi['weight'];
     heightController.text = widget.bmi['height'];
+    bmicalController.text = widget.bmi['bmi'];
   }
 
   @override
@@ -36,7 +38,7 @@ class _ViewState extends State<View> {
       backgroundColor: Color.fromARGB(255, 235, 137, 27),
       appBar: AppBar(
         //backgroundColor: Color.fromRGBO(56, 75, 49, 1.0),
-        title: Text("bmi View"),
+        title: Text("BMI EDIT"),
         actions: [
           IconButton(
               icon: Icon(Icons.delete),
@@ -91,10 +93,6 @@ class _ViewState extends State<View> {
               SizedBox(
                 height: 20,
               ),
-              TextFormField(
-                style: TextStyle(color: Colors.white),
-                decoration: inputDecoration("Height"),
-              ),
             ],
           ),
         ),
@@ -113,7 +111,8 @@ class _ViewState extends State<View> {
                     genderController.text,
                     ageController.text,
                     weightController.text,
-                    heightController.text);
+                    heightController.text,
+                    bmicalController.text);
                 Navigator.pop(context, true);
               },
               child: Text(

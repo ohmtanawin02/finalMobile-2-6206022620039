@@ -14,7 +14,6 @@ class Add extends StatefulWidget {
 class _AddState extends State<Add> {
   final TextEditingController _heightController = TextEditingController();
   final TextEditingController _weightController = TextEditingController();
-
   double _result;
   TextEditingController nameController = new TextEditingController();
   TextEditingController genderController = new TextEditingController();
@@ -124,7 +123,8 @@ class _AddState extends State<Add> {
               ),
               TextFormField(
                 style: TextStyle(color: Colors.white),
-                decoration: inputDecoration("Add bmi After Calculator"),
+                decoration: inputDecoration("Add BMI After Calculator"),
+                controller: bmicalController,
               ),
             ],
           ),
@@ -143,7 +143,8 @@ class _AddState extends State<Add> {
                     genderController.text,
                     ageController.text,
                     weightController.text,
-                    heightController.text);
+                    heightController.text,
+                    bmicalController.text);
                 Navigator.pop(context, true);
               },
               child: Text(

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -87,8 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   "Weight : " +
                   docs[index]['weight'] +
                   "Height : " +
-                  docs[index]['height'] +
-                  "CM"),
+                  docs[index]['height']),
             ),
           );
         },
