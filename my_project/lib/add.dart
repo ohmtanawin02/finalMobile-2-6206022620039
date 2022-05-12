@@ -100,7 +100,7 @@ class _AddState extends State<Add> {
               ),
               SizedBox(height: 15),
               RaisedButton(
-                color: Colors.pinkAccent,
+                color: Color.fromARGB(255, 2, 2, 2),
                 child: Text(
                   "Calculate",
                   style: TextStyle(color: Colors.white),
@@ -113,7 +113,7 @@ class _AddState extends State<Add> {
                     ? "Enter Value"
                     : "${_result.toStringAsFixed(2)}",
                 style: TextStyle(
-                  color: Colors.redAccent,
+                  color: Color.fromARGB(255, 7, 7, 7),
                   fontSize: 19.4,
                   fontWeight: FontWeight.w500,
                 ),
